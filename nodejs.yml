@@ -1,0 +1,7 @@
+---
+
+- hosts: vms
+
+  tasks:
+
+   - include: tasks/install-nodejs-4.4.0.yml
