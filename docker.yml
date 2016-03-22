@@ -1,0 +1,8 @@
+---
+
+- hosts: vms
+
+  tasks:
+
+   - include: tasks/install-docker.yml
+   - include: tasks/install-docker-compose.yml

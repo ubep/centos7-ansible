@@ -1,0 +1,15 @@
+- name: add yum repository for docker
+  copy: src=docker.repo
+        dest=/etc/yum.repos.d/
+        owner=root group=root mode=0644
+
+- name: install docker
+  yum: name=docker-engine
+
+- name: start docker
+  sudo: yes
+  command: service docker start
+
+- name: add docker to autostart
+  sudo: yes
+  command: chkconfig docker on
