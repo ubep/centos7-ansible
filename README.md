@@ -8,3 +8,8 @@ Install *docker* and *docker-compose*:
 Install *nodejs*
 
     ansible-playbook -i inventory -s -k -u root nodejs.yml
+
+Install *ruby*
+
+    ansible-galaxy install geerlingguy.ruby -p roles
+    ansible-playbook -i inventory -s -k -u root ruby.yml

@@ -1,0 +1,6 @@
+---
+
+- hosts: vms
+
+  roles:
+    - { role: geerlingguy.ruby }
