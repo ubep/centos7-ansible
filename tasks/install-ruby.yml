@@ -1,0 +1,37 @@
+
+- name: install dependencies to build Ruby
+  yum: name={{ item }}
+  with_items:
+    - "gcc-c++"
+    - "patch"
+    - "readline"
+    - "readline-devel"
+    - "zlib"
+    - "zlib-devel"
+    - "libyaml-devel"
+    - "libffi-devel"
+    - "openssl-devel"
+    - "make"
+    - "bzip2"
+    - "autoconf"
+    - "automake"
+    - "libtool"
+    - "bison"
+
+
+
+- name: download get.rvm.io script
+  get_url:
+    url: "https://get.rvm.io"
+    dest: /tmp/rvm-installer.sh
+    mode: 4440
+
+
+
+- name: Run RVM install script
+  shell: /tmp/rvm-installer.sh
+
+
+
+- name: Install Ruby
+  shell: source /etc/profile.d/rvm.sh && rvm install 2.3.3 && rvm use 2.3.3 --default

@@ -11,5 +11,4 @@ Install *nodejs*
 
 Install *ruby*
 
-    ansible-galaxy install geerlingguy.ruby -p roles
     ansible-playbook -i inventory -s -k -u root ruby.yml

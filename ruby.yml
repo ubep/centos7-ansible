@@ -2,5 +2,7 @@
 
 - hosts: vms
 
-  roles:
-    - { role: geerlingguy.ruby }
+  tasks:
+
+   - include: tasks/install-ruby.yml
+
