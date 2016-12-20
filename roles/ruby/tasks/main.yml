@@ -1,3 +1,4 @@
+---
 
 - name: install dependencies to build Ruby
   yum: name={{ item }}
@@ -35,3 +36,4 @@
 
 - name: Install Ruby
   shell: source /etc/profile.d/rvm.sh && rvm install 2.3.3 && rvm use 2.3.3 --default
+

@@ -2,7 +2,7 @@
 
 - hosts: vms
 
-  tasks:
+  roles:
 
-   - include: tasks/install-ruby.yml
+   - role: ruby
 
