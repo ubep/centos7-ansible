@@ -35,5 +35,10 @@
 
 
 - name: Install Ruby
-  shell: source /etc/profile.d/rvm.sh && rvm install 2.3.3 && rvm use 2.3.3 --default
+  shell: source /etc/profile.d/rvm.sh && rvm install 2.3.3
+
+
+
+- name: Set default Ruby
+  shell: /bin/bash --login -c "rvm --default use 2.3.3"
 
